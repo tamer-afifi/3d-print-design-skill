@@ -9,6 +9,13 @@ display enclosure.
 
 > Real parts beat spec sheets, and a 20-minute fit test beats a 10-hour reprint.
 
+| Front | Back |
+|---|---|
+| ![PitVista desk display: front 3/4 view](docs/images/pitvista-front.jpg) | ![PitVista desk display: rear 3/4 view with fabric-wrapped back](docs/images/pitvista-rear.jpg) |
+
+*The PitVista desk display: renders made from the same geometry as its print files. Matte black
+PLA shell, flush acrylic bezel, fabric-wrapped back, and a panel-mount USB-C power port.*
+
 ## What it does
 
 When you ask Claude for a case, mount, bracket, clip or fixture, the skill walks it through:

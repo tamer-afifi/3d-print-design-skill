@@ -3,6 +3,11 @@
 Based on the **PitVista** desk display: a touchscreen with a Raspberry Pi mounted on its back.
 All of the Pi's ports are hidden inside, and a single panel-mount USB-C extension brings power in.
 
+![PitVista desk display render](../../../docs/images/pitvista-front.jpg)
+
+The real PitVista shell is a curved desk wedge with a fabric-wrapped back. This example keeps
+the same techniques in a simpler box shape, so you can see what each part of the script does.
+
 ## What it shows
 
 - Measurements and parameters kept separate, with every derived dimension computed in code
