@@ -90,8 +90,9 @@ python functional-3dprint-design/examples/display-enclosure/enclosure.py
 
 ## Status
 
-The 3MF/STL writer and mesh checks are tested. The example models are written against the
-CadQuery 2.x API. If you hit an API difference on your CadQuery version, please open an issue.
+Both examples run cleanly with **CadQuery 2.5.2** (Python 3.9, macOS arm64). Every part passes
+the validity, closed-mesh and bed-fit checks. If something breaks on your CadQuery version,
+please open an issue.
 
 ## License
 
