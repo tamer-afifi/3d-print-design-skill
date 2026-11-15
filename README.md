@@ -33,6 +33,16 @@ When you ask Claude for a case, mount, bracket, clip or fixture, the skill walks
    assembly steps and an optional finishing guide.
 6. **Lessons.** Problems found after printing get fixed and written down.
 
+## Fit tests, printed
+
+The screwless USB-C panel mount from the PitVista build, printed as a fit test before the full
+enclosure. Two pegs go through the connector's ear holes, and a retainer slides into the
+grooves and traps the flange. No screws.
+
+| Assembled | Outside face | Pocket and retainer |
+|---|---|---|
+| ![Assembled USB-C fit test, top view](docs/images/fit-usbc-top.jpg) | ![USB-C fit test, outside face with the port](docs/images/fit-usbc-front.jpg) | ![USB-C pocket and slide-in retainer, printed](docs/images/fit-usbc-parts.jpg) |
+
 ## Repository layout
 
 ```

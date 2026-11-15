@@ -36,6 +36,8 @@ Output in `out/`:
 
 ## Fit-test checklist
 
+![The printed USB-C fit test from the PitVista build](../../../docs/images/fit-usbc-top.jpg)
+
 1. **Gauge:** which hole lets the key's peg slide with light pressure? Which slot lets the tab
    slide? Put those clearances into `c_peg` and `c_slide`.
 2. **USB-C slice:** the socket goes through the cut-out, the ear holes drop onto the pegs, and
