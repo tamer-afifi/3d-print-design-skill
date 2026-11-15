@@ -12,6 +12,7 @@ display enclosure.
 | Front | Back |
 |---|---|
 | ![PitVista desk display: front 3/4 view](docs/images/pitvista-front.jpg) | ![PitVista desk display: rear 3/4 view with fabric-wrapped back](docs/images/pitvista-rear.jpg) |
+| ![PitVista on a desk, angled view](docs/images/pitvista-desk-angle.jpg) | ![PitVista on a desk, fabric-wrapped back](docs/images/pitvista-desk-back.jpg) |
 
 *The PitVista desk display: renders made from the same geometry as its print files. Matte black
 PLA shell, flush acrylic bezel, fabric-wrapped back, and a panel-mount USB-C power port.*
