@@ -99,8 +99,9 @@ every exported mesh is closed (`helpers/validate.py: check_part`). Wall thicknes
 measured automatically. Assert each wall parameter against the minimums in
 `references/design-rules.md` with `assert_min`, as the examples do.
 
-If fit tests go into one 3MF (`export_plate`), the objects keep their model positions and
-may overlap. Tell the user to press **Arrange** in the slicer.
+Put fit tests in one 3MF with `export_plate`. It lays them out side by side on the bed, so they
+open ready to slice. Bambu Studio shows a "3MF is not from Bambu Lab" notice for any file made
+outside it. That's harmless, so tell the user to expect it.
 
 ## Phase 6 — Capture lessons
 

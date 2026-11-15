@@ -197,7 +197,37 @@ def export_part(shape, basepath: str, name: str | None = None,
     return out
 
 
+def arrange(meshes: Sequence[Mesh], bed: Tuple[float, float] = (250.0, 250.0),
+            gap: float = 6.0) -> List[Mesh]:
+    """Lay meshes out in rows on the bed so they don't overlap (simple shelf packing).
+
+    Each mesh is dropped to Z = 0 and moved so its footprint sits in its own slot,
+    centred on the bed as a group. Parts larger than the bed are left where they are.
+    """
+    placed, x, y, row_h = [], 0.0, 0.0, 0.0
+    boxes = []
+    for m in meshes:
+        m = drop_to_bed(m)
+        xs = [v[0] for v in m.vertices]; ys = [v[1] for v in m.vertices]
+        w, d = max(xs) - min(xs), max(ys) - min(ys)
+        if x > 0 and x + w > bed[0]:
+            x, y, row_h = 0.0, y + row_h + gap, 0.0
+        dx, dy = x - min(xs), y - min(ys)
+        placed.append(Mesh(m.name, [(a + dx, b + dy, c) for a, b, c in m.vertices], m.triangles))
+        boxes.append((x, y, x + w, y + d))
+        x += w + gap
+        row_h = max(row_h, d)
+    # centre the whole layout on the bed
+    if boxes:
+        cx = (bed[0] - max(b[2] for b in boxes)) / 2
+        cy = (bed[1] - max(b[3] for b in boxes)) / 2
+        placed = [Mesh(m.name, [(a + cx, b + cy, c) for a, b, c in m.vertices], m.triangles)
+                  for m in placed]
+    return placed
+
+
 def export_plate(shapes: Iterable[Tuple[str, object]], path: str,
-                 tolerance: float = 0.01) -> str:
-    """Write several named shapes as separate objects in one 3MF (e.g. a fit-test set)."""
-    return write_3mf(path, [mesh_from_shape(s, n, tolerance) for n, s in shapes])
+                 tolerance: float = 0.01, bed: Tuple[float, float] = (250.0, 250.0)) -> str:
+    """Write several named shapes as separate objects in one 3MF (e.g. a fit-test set),
+    laid out side by side on the bed so the slicer doesn't show them overlapping."""
+    return write_3mf(path, arrange([mesh_from_shape(s, n, tolerance) for n, s in shapes], bed))

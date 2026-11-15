@@ -29,7 +29,7 @@ Output in `out/`:
 
 | File | Print |
 |---|---|
-| `fit_tests.3mf` | **First.** USB-C slice + retainer, clip slice, clearance gauge + key. Press *Arrange* in the slicer. |
+| `fit_tests.3mf` | **First.** USB-C slice + retainer, clip slice, clearance gauge + key, already laid out side by side. |
 | `shell.3mf` | Front face down. Cosmetic profile (0.12 mm, tree supports build-plate only, brim, seam at back) |
 | `back_cover.3mf` | Flat, outside face down |
 | `retainer.3mf` | Flat |
